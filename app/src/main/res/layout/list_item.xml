@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+
+
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtCountryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="3"
+                    android:singleLine="false"
+                    android:text="Bosnia and Herzegovina"
+                    android:textSize="16sp"
+
+                    android:textStyle="bold"
+                    android:textColor="@color/negroTexto"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtProvincesName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:singleLine="false"
+                    android:text="Anhui"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/negroTexto"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/txtCountryName"
+                    app:layout_constraintStart_toStartOf="@+id/txtCountryName"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCountryName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="203dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtConfir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Confirmados:"
+                    android:textColor="@color/negroTexto"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/txtConfirmed"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textColor="@color/negroTexto"
+                    android:id="@+id/txtConfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:text="120"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtConfir" />
+
+                <TextView
+                    android:id="@+id/txtRecover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Recuperados:"
+                    android:textColor="@color/negroTexto"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/txtConfir"
+                    app:layout_constraintTop_toBottomOf="@+id/txtConfir" />
+
+
+                <TextView
+                    android:textColor="@color/negroTexto"
+                    android:id="@+id/txtRecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+                    app:layout_constraintEnd_toEndOf="@+id/txtConfirmed"
+                    app:layout_constraintTop_toTopOf="@+id/txtRecover" />
+
+                <TextView
+                    android:id="@+id/txtDeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Muertes:"
+                    android:textColor="@color/negroTexto"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/txtRecover"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRecover" />
+
+                <TextView
+                    android:id="@+id/txtDeaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/negroTexto"
+                    app:layout_constraintEnd_toEndOf="@+id/txtRecovered"
+                    app:layout_constraintTop_toTopOf="@+id/txtDeat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
